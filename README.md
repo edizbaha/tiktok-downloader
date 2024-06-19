@@ -19,8 +19,8 @@ This bot allows users to download TikTok videos without a watermark directly fro
 ### Steps
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/tiktok-video-downloader-bot.git
-   cd tiktok-video-downloader-bot
+   git clone https://github.com/edizbaha/tiktok-downloader.git
+   cd tiktok-downloader
    ```
 2. Install the required dependencies:
    ```bash
