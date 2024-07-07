@@ -28,7 +28,7 @@ bot.on("message", function(msg) {
     bot.sendMessage(msg.chat.id, "⏳Please wait...");
 
     // Request the video from the TikTok API
-    var reqvideourl = "https://www.tikwm.com/api/?url=" + text;
+    var reqvideourl = "https://www.tikwm.com/api/?url=" + text + "&hd=1";
     request(reqvideourl, function(error, response, body) {
       var json = JSON.parse(body);
 
@@ -41,7 +41,7 @@ bot.on("message", function(msg) {
           return new Promise(resolve => setTimeout(resolve, time));
         }
 
-        delay(500).then(() => bot.sendVideo(msg.chat.id, json.data.play));
+        delay(500).then(() => bot.sendVideo(msg.chat.id, json.data.hdplay));
       }
     });
   } else {
